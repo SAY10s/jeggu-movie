@@ -312,13 +312,13 @@ function App() {
     makumba23: {
       btn1Value: "Jebnij se zuberka",
       btn2Value: "KAMIKAZE",
-      nextVid1: "bizonending",
+      nextVid1: "zubr",
       nextVid2: "pierdolsie",
       questionTime: 1,
     },
-    bizonending: {
+    zubr: {
       btn1Value: "[END]",
-      nextVid1: "bizonending",
+      nextVid1: "zubr",
       questionTime: 1,
     },
     pierdolsie: {
