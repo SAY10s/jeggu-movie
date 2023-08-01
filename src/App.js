@@ -362,7 +362,7 @@ function Video({ videos }) {
           {buttons}
         </div>
         <div className="skip" onClick={skip}>
-          SKIP
+          Pokaz przyciski
         </div>
         {/* <button onClick={}></button> */}
       </div>
