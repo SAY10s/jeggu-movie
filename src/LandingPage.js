@@ -9,10 +9,10 @@ const LandingPage = () => {
       <div
         className="title"
         onClick={() => {
-          navigate("/odbierzprezent");
+          navigate("/graj");
         }}
       >
-        Odbierz prezent!
+        Zobacz twoją grę!
       </div>
     </div>
   );
