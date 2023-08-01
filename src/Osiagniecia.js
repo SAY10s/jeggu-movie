@@ -8,7 +8,7 @@ const Osiagniecia = () => {
         <br></br>
 
         <div className="big">Scenariusz: </div>
-        <div>Gracjan Karpiński && Nikodem Majzner</div>
+        <div>Gracjan Karpiński</div>
         <br></br>
         <div className="big">Montaż:</div>
         <div>Gracjan Karpiński</div>
