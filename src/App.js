@@ -759,6 +759,7 @@ function App() {
       bomba: 1,
     },
     f5: {
+      btn1Value: "[Kontynuuj]",
       opt1req: {
         param: "quiet",
         expression: "==",
