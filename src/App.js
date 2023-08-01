@@ -34,6 +34,45 @@ function Button(props) {
     );
   }
 }
+// <div className="button-wrapper">
+//   <div className="left">
+//     <div className="d1" />
+//     <div className="d2" />
+//     <div className="d3" />
+//     <div className="d4" />
+//     <button
+//       className="button"
+//       id={props.btnId}
+//       onClick={() =>
+//         handelBtn(
+//           props.nextVid,
+//           props.setCurrentVideo,
+//           props.setRelations,
+//           props.questionTime,
+//           props.relations,
+//           props.zubr,
+//           props.kodnuklearny,
+//           props.koddodrzwi,
+//           props.ewertzyje,
+//           props.pilot,
+//           props.dysk,
+//           props.zwlokiewerta,
+//           props.zubrprzezyje,
+//           props.ewert
+//         )
+//       }
+//     >
+//       {props.btnValue}
+//     </button>
+//   </div>
+//   <div className="right">
+//     <div className="d5" />
+//     <div className="d6" />
+//     <div className="d7" />
+//     <div className="d8" />
+//     <div>1</div>
+//   </div>
+// </div>
 
 function Video({ videos }) {
   let btn1value = videos[videos.currentVideo].btn1Value;
@@ -144,7 +183,7 @@ function Video({ videos }) {
       nextVid={videos[videos.currentVideo].nextVid1}
       setCurrentVideo={videos.setCurrentVideo}
       setRelations={videos.setRelations}
-      // questionTime={videos[videos[videos.currentVideo].nextVid1].questionTime}
+      questionTime={videos[videos[videos.currentVideo].nextVid1].questionTime}
       relations={videos.relations}
       zubr={videos[videos[videos.currentVideo].nextVid1].zubr}
       btnValue={btn1value}
@@ -158,7 +197,7 @@ function Video({ videos }) {
         nextVid={videos[videos.currentVideo].nextVid2}
         setCurrentVideo={videos.setCurrentVideo}
         setRelations={videos.setRelations}
-        // questionTime={videos[videos[videos.currentVideo].nextVid2].questionTime}
+        questionTime={videos[videos[videos.currentVideo].nextVid2].questionTime}
         relations={videos.relations}
         zubr={videos[videos[videos.currentVideo].nextVid2].zubr}
         btnValue={btn2value}
@@ -173,7 +212,7 @@ function Video({ videos }) {
         nextVid={videos[videos.currentVideo].nextVid3}
         setCurrentVideo={videos.setCurrentVideo}
         setRelations={videos.setRelations}
-        // questionTime={videos[videos[videos.currentVideo].nextVid3].questionTime}
+        questionTime={videos[videos[videos.currentVideo].nextVid3].questionTime}
         relations={videos.relations}
         zubr={videos[videos[videos.currentVideo].nextVid3].zubr}
         btnValue={btn3value}
@@ -188,7 +227,7 @@ function Video({ videos }) {
         nextVid={videos[videos.currentVideo].nextVid4}
         setCurrentVideo={videos.setCurrentVideo}
         setRelations={videos.setRelations}
-        // questionTime={videos[videos[videos.currentVideo].nextVid4].questionTime}
+        questionTime={videos[videos[videos.currentVideo].nextVid4].questionTime}
         relations={videos.relations}
         zubr={videos[videos[videos.currentVideo].nextVid4].zubr}
         btnValue={btn4value}
@@ -203,10 +242,14 @@ function Video({ videos }) {
         <video
           src={`./Videos/${videos.currentVideo}.mp4`}
           width="75%"
+          // height="720"
           type="video/mp4"
           id="film"
+          // controls
           autoPlay
+          // muted
         ></video>
+        {/* <div className="temp">{videos.currentVideo}</div> */}
         <br></br>
         <div className="buttons-wrapper" id="buttonswrapper">
           {buttons}
@@ -214,6 +257,7 @@ function Video({ videos }) {
         <div className="skip" onClick={skip}>
           SKIP
         </div>
+        {/* <button onClick={}></button> */}
       </div>
     </>
   );
@@ -265,22 +309,22 @@ function App() {
       nextVid1: "makumba23",
       questionTime: 1,
     },
-    start: {
-      btn1Value: "KAMIKAZE",
-      btn2Value: "Jebnij se zuberka",
-      nextVid1: "pierdolsie",
-      nextVid2: "bizonending",
-      questionTime: 1,
-    },
-    pierdolsie: {
-      btn1Value: "[END]",
-      nextVid1: "pierdolsie",
+    makumba23: {
+      btn1Value: "Jebnij se zuberka",
+      btn2Value: "KAMIKAZE",
+      nextVid1: "bizonending",
+      nextVid2: "pierdolsie",
       questionTime: 1,
     },
     bizonending: {
       btn1Value: "[END]",
       nextVid1: "bizonending",
       questionTime: 1,
+    },
+    pierdolsie: {
+      btn1Value: "[END]",
+      nextVid1: "pierdolsie",
+      questionTime: 64,
     },
   };
   return (
